@@ -19,4 +19,23 @@ This script generates the assembly code of a C code and save it in an output fil
 This script compiles a C file and creates an executable named cisfun
   > The C file name will be saved in the variable $CFILE
 
-# 4-
+# 4-puts.c
+This C program prints out "Programming is like building a multilingual puzzle, followed by a new line.
+  > It uses the function puts 
+  > The program ends with the value 0
+  > The printf function is not allowed in this program 
+
+# 5-printf.c
+This C program prints out "with proper grammar, but the outcome is a piece of art,", followed by a new line
+  > Used the printf function
+  > Didn't use puts function
+  > The program returs 0
+  > It compiles without warning when using the -Wall gcc option
+
+# 6-size.c
+This C program prints the size of various types on the computer it compiled and run on
+  > Warnings are allowed
+  > The program should return 0
+  > You might have to install the package libc6-dev-i386 on your Linux (Vagrant) to test the -m32 gcc option
+
+# 
