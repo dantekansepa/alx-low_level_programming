@@ -1,10 +1,10 @@
 #include "main.h"
 
-11;rgb:0000/0000/0000/**
-		      * jack_bauer - prints every minute of the day
-		      *
-		      * Return: no return
-		      */
+/**
+ * jack_bauer - prints every minute of the day
+ *
+ * Return: no return
+*/
 void jack_bauer(void)
 {
   int a, b, c, d;
