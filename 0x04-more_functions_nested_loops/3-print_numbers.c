@@ -4,13 +4,11 @@
 /**
  *print_numbers - is a function that prints the numbers from 0-9
  */
-void prit_numbers(void)
+void print_numbers(void)
 {
-  char c;
+	      char c;
 
-  for (c = '0'; c <= '9'; c++)
-    {
-      _putchar(c);
-      _putchar('\n');
-    }
+	      for (c = '0'; c <= '9'; c++)
+	      _putchar(c);
+	      _putchar('\n');
 }
