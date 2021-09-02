@@ -1,6 +1,5 @@
 #include "main.h"
 
-#include "holberton.h"
 /**
  * print_numbers - prints the digits 1-9
  */
