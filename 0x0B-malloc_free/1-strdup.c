@@ -26,3 +26,4 @@ char *_strdup(char *str)
 		j++;
 	}
 	return (strDup);
+}
