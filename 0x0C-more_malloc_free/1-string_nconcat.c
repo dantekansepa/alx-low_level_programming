@@ -1,53 +1,39 @@
 #include "main.h"
-#include "stdlib.h"
-
+#include <stdlib.h>
 /**
-*string_nconcat -  function that concatenates two strings.
-*
-*@s1: string one
-*@s2: string two
-*@n: number of byte to copy
-*
-*Return: concatenation of two strings
-*/
-
+ * *string_nconcat - concatenates two strings
+ * @s1: first string
+ * @s2: second string
+ * @n: limit of s2
+ * Return: pointer to new space in memory or null
+ **/
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *concat_str;
-	unsigned int s1_size = 0, s2_size = 0, counter = 0, counter2 = 0;
+	char *strDup;
+	int i;
+	unsigned int j;
 
 	if (s1 == NULL)
-	s1 = "";
-
+		s1 = "";
 	if (s2 == NULL)
-	s2 = "";
-
-
-	while (*(s1 + s1_size) != '\0')
-	s1_size++;
-
-	while (*(s2 + s2_size) != '\0')
-	s2_size++;
-
-	if (n < s2_size)
-		s2_size = n;
-
-	concat_str = malloc((s1_size + s2_size + 1) * sizeof(char));
-
-	if (concat_str == NULL)
+		s2 = "";
+	i = 0;
+	while (s1[i] != '\0')
+		i++;
+	strDup = malloc(sizeof(char) * (i + n + 1));
+	if (strDup == NULL)
 		return (NULL);
-
-	for (counter = 0; counter < s1_size; counter++)
+	i = j = 0;
+	while (s1[i] != '\0')
 	{
-	concat_str[counter] = s1[counter];
+		strDup[i] = s1[i];
+		i++;
 	}
-
-	for (counter2 = 0; counter2 < s2_size; counter++, counter2++)
+	while (j < n && s2[j] != '\0')
 	{
-	concat_str[counter] = s2[counter2];
+		strDup[i] = s2[j];
+		i++, j++;
 	}
-
-	concat_str[counter] = '\0';
-
-	return (concat_str);
+	strDup[i] = '\0';
+	return (strDup);
 }
