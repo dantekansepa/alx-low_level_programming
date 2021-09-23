@@ -1,7 +1,5 @@
 #include "main.h"
-#include <stdlib.h>
-#include <stdio.h>
-#include <limits.h>
+
 /**
  * *malloc_checked - allocate memory with malloc
  * @b: unsigned int type
